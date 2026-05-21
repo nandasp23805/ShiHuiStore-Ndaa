@@ -1,0 +1,5 @@
+tmp
+uploads
+.env
+*.log
+

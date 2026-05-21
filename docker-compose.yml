@@ -1,0 +1,55 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: jacket_store_postgres
+    environment:
+      POSTGRES_USER: jacket
+      POSTGRES_PASSWORD: jacket
+      POSTGRES_DB: jacket_store
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jacket -d jacket_store"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      target: dev
+    container_name: jacket_store_backend
+    env_file:
+      - ./backend/.env.example
+    environment:
+      DB_HOST: postgres
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend:/app
+      - backend_uploads:/app/uploads
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      target: dev
+    container_name: jacket_store_frontend
+    env_file:
+      - ./frontend/.env.example
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  backend_uploads:
+

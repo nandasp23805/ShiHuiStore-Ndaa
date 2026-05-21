@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShihuyStore Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { ink: "#111111", charcoal: "#242424", mist: "#F5F5F3", gold: "#C7A76C", cream: "#E9DFC8" },
+            boxShadow: { soft: "0 18px 50px rgba(17, 17, 17, 0.10)" }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .container-page { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    </style>
+  </head>
+  <body class="bg-mist text-ink">
+    <header class="sticky top-0 z-40 border-b border-black/10 bg-white/90 backdrop-blur">
+      <div class="container-page flex h-20 items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="grid h-11 w-11 place-items-center rounded-full bg-ink text-sm font-black text-gold ring-2 ring-gold/25">SH</span>
+          <span class="text-xl font-black tracking-wide">ShihuyStore</span>
+        </div>
+        <nav class="hidden items-center gap-7 lg:flex">
+          <a class="text-sm font-semibold text-gold" href="#">Beranda</a>
+          <a class="text-sm font-semibold text-charcoal hover:text-gold" href="#produk">Produk</a>
+          <a class="text-sm font-semibold text-charcoal hover:text-gold" href="#kategori">Kategori</a>
+          <a class="text-sm font-semibold text-charcoal hover:text-gold" href="#tentang">Tentang Kami</a>
+          <a class="text-sm font-semibold text-charcoal hover:text-gold" href="#kontak">Kontak</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button class="rounded-full p-2 hover:bg-cream">⌕</button>
+          <button class="relative rounded-full p-2 hover:bg-cream">🛍<span class="absolute -right-1 -top-1 grid h-5 w-5 place-items-center rounded-full bg-ink text-[11px] font-bold text-white">2</span></button>
+          <button class="hidden rounded-full bg-ink px-4 py-2 text-sm font-bold text-white hover:bg-gold lg:block">Login/Register</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="relative min-h-[calc(100vh-80px)] overflow-hidden bg-ink text-white">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1800&q=85" alt="Model memakai jaket hitam modern" class="absolute inset-0 h-full w-full object-cover opacity-70" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-black/10"></div>
+        <div class="container-page relative flex min-h-[calc(100vh-80px)] items-center py-16">
+          <div class="max-w-2xl">
+            <p class="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-bold text-cream backdrop-blur">Premium Jacket Collection 2026</p>
+            <h1 class="text-5xl font-black leading-tight md:text-7xl">JAKET KEREN UNTUK GAYA ANDA!</h1>
+            <p class="mt-6 max-w-xl text-lg leading-8 text-white/80">Koleksi hoodie, denim, bomber, dan parka dengan material premium, potongan modern, dan detail elegan untuk aktivitas harian.</p>
+            <a href="#produk" class="mt-8 inline-flex rounded-full bg-gold px-7 py-4 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-cream">Beli Sekarang</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-page relative z-10 -mt-10 grid gap-4 md:grid-cols-4">
+        <div class="rounded-md bg-white p-5 shadow-soft"><p class="mb-4 text-3xl text-gold">🚚</p><p class="font-black">Gratis Ongkir</p><p class="mt-1 text-sm text-neutral-500">Pengiriman nyaman ke seluruh Indonesia.</p></div>
+        <div class="rounded-md bg-white p-5 shadow-soft"><p class="mb-4 text-3xl text-gold">★</p><p class="font-black">Kualitas Premium</p><p class="mt-1 text-sm text-neutral-500">Material nyaman dan tahan lama.</p></div>
+        <div class="rounded-md bg-white p-5 shadow-soft"><p class="mb-4 text-3xl text-gold">✓</p><p class="font-black">Garansi Produk</p><p class="mt-1 text-sm text-neutral-500">Belanja lebih tenang dan terpercaya.</p></div>
+        <div class="rounded-md bg-white p-5 shadow-soft"><p class="mb-4 text-3xl text-gold">☎</p><p class="font-black">Layanan 24/7</p><p class="mt-1 text-sm text-neutral-500">Tim kami siap membantu kapan saja.</p></div>
+      </section>
+
+      <section id="kategori" class="container-page py-20">
+        <p class="text-sm font-black uppercase tracking-[0.2em] text-gold">Kategori</p>
+        <h2 class="mt-2 text-3xl font-black">Pilih Gaya Jaket</h2>
+        <div class="mt-8 grid gap-5 md:grid-cols-4">
+          <a class="group relative aspect-[4/5] overflow-hidden rounded-md bg-ink shadow-sm" href="#"><img class="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=900&q=80" /><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h3 class="absolute bottom-5 left-5 text-xl font-black text-white">Jaket Hoodie</h3></a>
+          <a class="group relative aspect-[4/5] overflow-hidden rounded-md bg-ink shadow-sm" href="#"><img class="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=900&q=80" /><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h3 class="absolute bottom-5 left-5 text-xl font-black text-white">Jaket Denim</h3></a>
+          <a class="group relative aspect-[4/5] overflow-hidden rounded-md bg-ink shadow-sm" href="#"><img class="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=900&q=80" /><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h3 class="absolute bottom-5 left-5 text-xl font-black text-white">Jaket Bomber</h3></a>
+          <a class="group relative aspect-[4/5] overflow-hidden rounded-md bg-ink shadow-sm" href="#"><img class="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" /><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h3 class="absolute bottom-5 left-5 text-xl font-black text-white">Jaket Parka</h3></a>
+        </div>
+      </section>
+
+      <section id="produk" class="container-page pb-8">
+        <p class="text-sm font-black uppercase tracking-[0.2em] text-gold">Produk Terbaik</p>
+        <h2 class="mt-2 text-3xl font-black">Best Seller Minggu Ini</h2>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="group overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-soft"><div class="aspect-[4/5] overflow-hidden bg-neutral-200"><img class="h-full w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=900&q=80" /></div><div class="p-5"><p class="mb-2 text-sm font-bold text-gold">★ 4.9</p><h3 class="text-lg font-black">Noir Signature Hoodie</h3><p class="mt-2 min-h-10 text-sm leading-5 text-neutral-600">Hoodie premium dengan fleece tebal dan siluet modern.</p><div class="mt-5 flex items-center justify-between gap-3"><span class="font-black">Rp489.000</span><button class="rounded-full bg-ink px-4 py-2 text-sm font-bold text-white hover:bg-gold">Tambah</button></div></div></article>
+          <article class="group overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-soft"><div class="aspect-[4/5] overflow-hidden bg-neutral-200"><img class="h-full w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=900&q=80" /></div><div class="p-5"><p class="mb-2 text-sm font-bold text-gold">★ 4.8</p><h3 class="text-lg font-black">Urban Denim Trucker</h3><p class="mt-2 min-h-10 text-sm leading-5 text-neutral-600">Jaket denim clean dengan cutting regular dan detail metal.</p><div class="mt-5 flex items-center justify-between gap-3"><span class="font-black">Rp679.000</span><button class="rounded-full bg-ink px-4 py-2 text-sm font-bold text-white hover:bg-gold">Tambah</button></div></div></article>
+          <article class="group overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-soft"><div class="aspect-[4/5] overflow-hidden bg-neutral-200"><img class="h-full w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=900&q=80" /></div><div class="p-5"><p class="mb-2 text-sm font-bold text-gold">★ 4.9</p><h3 class="text-lg font-black">Black Flight Bomber</h3><p class="mt-2 min-h-10 text-sm leading-5 text-neutral-600">Bomber hitam elegan dengan lining nyaman untuk harian.</p><div class="mt-5 flex items-center justify-between gap-3"><span class="font-black">Rp729.000</span><button class="rounded-full bg-ink px-4 py-2 text-sm font-bold text-white hover:bg-gold">Tambah</button></div></div></article>
+          <article class="group overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-soft"><div class="aspect-[4/5] overflow-hidden bg-neutral-200"><img class="h-full w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" /></div><div class="p-5"><p class="mb-2 text-sm font-bold text-gold">★ 4.7</p><h3 class="text-lg font-black">Arctic Parka Cream</h3><p class="mt-2 min-h-10 text-sm leading-5 text-neutral-600">Parka premium tahan angin dengan aksen krem minimalis.</p><div class="mt-5 flex items-center justify-between gap-3"><span class="font-black">Rp899.000</span><button class="rounded-full bg-ink px-4 py-2 text-sm font-bold text-white hover:bg-gold">Tambah</button></div></div></article>
+        </div>
+      </section>
+
+      <section id="tentang" class="container-page py-16">
+        <div class="grid gap-8 rounded-md bg-white p-8 shadow-sm md:grid-cols-2 md:p-12">
+          <div><p class="text-sm font-black uppercase tracking-[0.2em] text-gold">Tentang Kami</p><h2 class="mt-2 text-3xl font-black">Marketplace fashion outerwear premium.</h2></div>
+          <p class="leading-8 text-neutral-600">ShihuyStore menghadirkan jaket modern yang dirancang untuk tampilan clean, material nyaman, dan daya pakai panjang. Setiap produk dikurasi untuk gaya urban yang profesional.</p>
+        </div>
+      </section>
+
+      <section id="kontak" class="container-page pb-12">
+        <div class="rounded-md bg-ink p-8 text-white shadow-soft md:p-12">
+          <p class="text-sm font-black uppercase tracking-[0.2em] text-gold">Kontak</p>
+          <div class="mt-4 grid gap-6 md:grid-cols-3">
+            <div><p class="font-black">Email</p><p class="mt-2 text-white/65">hello@shihuystore.test</p></div>
+            <div><p class="font-black">WhatsApp</p><p class="mt-2 text-white/65">+62 812 0000 2026</p></div>
+            <div><p class="font-black">Studio</p><p class="mt-2 text-white/65">Jakarta, Indonesia</p></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-20 bg-ink py-10 text-white">
+      <div class="container-page flex flex-col justify-between gap-4 md:flex-row md:items-center">
+        <div>
+          <div class="flex items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full bg-gold text-sm font-black text-ink">SH</span><p class="text-lg font-black">ShihuyStore</p></div>
+          <p class="mt-2 text-sm text-white/60">Premium outerwear untuk gaya harian yang tajam dan nyaman.</p>
+        </div>
+        <p class="text-sm text-white/50">© 2026 ShihuyStore. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
